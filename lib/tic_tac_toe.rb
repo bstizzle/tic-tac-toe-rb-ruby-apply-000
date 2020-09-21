@@ -39,7 +39,11 @@ def turn(board)
   position = gets.strip
   index = input_to_index(position)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index, xo = "X")
+>>>>>>> a5d33c52d627c2f1316f10af43208eb91f381109
     display_board(board)
   else
     puts "Invalid move, please enter a different number:"
@@ -114,6 +118,7 @@ def winner(board)
 end
 
 def play(board)
+<<<<<<< HEAD
   while !over?(board)
     turn(board)
   end
@@ -124,3 +129,11 @@ def play(board)
     puts "Congratulations #{winner(board)}!"
   end
 end 
+=======
+  counter = 1
+  while(counter < 10)
+    turn(board)
+    counter += 1
+  end
+end
+>>>>>>> a5d33c52d627c2f1316f10af43208eb91f381109
